@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\CommentsController;
 
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,6 +18,7 @@ use App\Http\Controllers\CommentsController;
 */
 Route::get('/posts',[PostsController:: class,'getPosts']);
 Route::get('/comments',[CommentsController:: class,'getComments']);
+Route::post('/insertPost',[PostsController:: class,'insertPost']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
